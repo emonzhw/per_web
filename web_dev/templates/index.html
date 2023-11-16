@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Shortener</title>
+</head>
+<body>
+    <h1>URL Shortener</h1>
+    <form method="post" action="/shorten">
+        <input type="text" name="long_url" placeholder="Enter long URL" required>
+        <input type="text" name="custom_key" placeholder="Custom short key (optional)">
+        <input type="submit" value="Shorten">
+    </form>
+    {% if short_url %}
+    <p>Shortened URL: <a href="{{ short_url }}">{{ short_url }}</a></p>
+    {% endif %}
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <button onclick="window.location.href='/admin'">Admin Page</button>
+</body>
+</html>

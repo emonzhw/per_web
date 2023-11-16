@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Page</title>
+</head>
+<body>
+    <h1>Admin Page</h1>
+    <table>
+        <tr>
+            <th>Shortened URL</th>
+            <th>Original URL</th>
+            
+        </tr>
+        {% for short, long  in records.items() %}
+        <tr>
+            <td>{{ short }}</td>
+            <td>{{ long }}</td> 
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
